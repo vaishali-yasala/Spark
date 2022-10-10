@@ -6,15 +6,15 @@ Files ending with .pdf contains the input and output result at various steps.
 
 ## Table Of Contents
  1. RDD - map Transformation
- - [Code] - (https://github.com/vaishali-yasala/Spark/blob/main/rdd-map.py)
- - [Output] - (https://github.com/vaishali-yasala/Spark/blob/main/rdd-map.pdf)
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-map.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-map.pdf)
 
  2. RDD - filter Transformation
- - [Code] - (https://github.com/vaishali-yasala/Spark/blob/main/rdd-filter.py)
- - [Output] - (https://github.com/vaishali-yasala/Spark/blob/main/rdd-filter.pdf)
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-filter.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-filter.pdf)
 
  3. RDD - flatMap Transformation
- - [Code] - (https://github.com/vaishali-yasala/Spark/blob/main/rdd-flatMap.py)
- - [Output] - (https://github.com/vaishali-yasala/Spark/blob/main/rdd-flatMap.pdf)
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-flatMap.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-flatMap.pdf)
 
 
