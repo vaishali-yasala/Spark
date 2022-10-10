@@ -9,19 +9,19 @@ if __name__ == '__main__':
      spark = SparkSession.builder.appName("map transformation").getOrCreate()
 
 #Create a dataset
-     data = spark.sparkContext.range(1,5)
+data = spark.sparkContext.range(1,5)
 
 #Show the dataset
-     print('Dataset')
-     print(data.collect())
-     print('-------------')
+print('Dataset')
+print(data.collect())
+print('-------------')
 
 #Use the map function
-     rdd = data.map(lambda x: (x, x*x, x*x*x))
+rdd = data.map(lambda x: (x, x*x, x*x*x))
 
 #Show the new dataset after the map function
-     print('New Dataset')
-     print(rdd.collect())
+print('New Dataset')
+print(rdd.collect())
      
 
 
@@ -43,8 +43,7 @@ df.show()
 rdd2 = df.rdd.map(lambda x: (x[0], x[1]*2, x[2]*2))
 df2 = rdd2.toDF(["number","square_doubled", "cube_doubled"]).show()
 
-
-
+#Using a function 
 data = [('1','1','1'),
         ('2','4','8'),
         ('3','9','27'),
