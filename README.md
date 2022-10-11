@@ -5,16 +5,22 @@ Files ending with .py contains the Python language code.
 Files ending with .pdf contains the input and output result at various steps.
 
 ## Table Of Contents
- 1. RDD - map Transformation
+ 1. RDD - map Transformation -
+ map( ) is the transformation that takes a function and applies the function to each element of the input RDD. The result in the function will become the value of each element in the resultant RDD.
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-map.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-map.pdf)
 
- 2. RDD - filter Transformation
+ 2. RDD - filter Transformation -
+filter( ) is the transformation that returns a new RDD with only the elements that ppasses the filter condition.
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-filter.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-filter.pdf)
 
- 3. RDD - flatMap Transformation
+ 3. RDD - flatMap Transformation -
+ flatMap( ) is the transformation that takes a function and applies the function to each element of the RDD as in map( ) function. The difference is that flatMap will return multiple values for each element in the source RDD.
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-flatMap.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-flatMap.pdf)
 
-
+ 4. RDD mapPartitions Transformation -
+ Similar to map, but runs separately on each partition of the RDD.
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-mapPartitions.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-mapPartitions.pdf)
