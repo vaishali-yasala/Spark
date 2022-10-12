@@ -93,7 +93,7 @@ def process_partition_size(index, iterator):
     yield (index, mylist)
     
 #Reading a text file
-input_file_path = "/Users/vaishaliyasala/Desktop/Github/Spark/rdd-mapPartitionsWithIndex/file.txt"
+input_file_path = "/Users/vaishaliyasala/Desktop/Github/Spark/Exercise_Dependencies/file.txt"
 files_overview_rdd = spark.sparkContext.textFile(input_file_path, 4)
 
 print("Printing files_overview_rdd: ", files_overview_rdd.collect())
