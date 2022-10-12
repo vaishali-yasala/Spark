@@ -1,0 +1,2 @@
+SparkContext is an entry point to the pyspark functionality that
+is used to communicate with the cluster and to create an RDD, accumulator, and broadcast  variables. 
