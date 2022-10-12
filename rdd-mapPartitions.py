@@ -6,7 +6,7 @@
 # 
 # mapPartitions( ) - This can be used when we need specific data from each partition of the RDD. In the example below, we are aiming to find the minimum and maximum values of all the values in the RDD. Using map( ) can create a lot of Intermediary key-value (K, V) pairs for the simple task of finding minimum and maximum value of numbers in the RDD. 
 
-# In[3]:
+# In[4]:
 
 
 import pyspark
@@ -29,9 +29,10 @@ print('data count =', rdd.count())
 print("Number of Partitions = ", rdd.getNumPartitions())
 
 
-# In[4]:
+# In[5]:
 
 
+#Using a function to get the minimum and maximum values of each partition in the input RDD. 
 def minmax(iterator):
     a = True
     for x in iterator:
@@ -44,17 +45,14 @@ def minmax(iterator):
             local_max = max(x, local_max)
     return (local_min, local_max)
 
+#Here, mapPartitions gives out the List of Minimum and Maximum values of each partition
 minmax_rdd = rdd.mapPartitions(minmax)
 print("List of Minimum and Maximum values of each partition = ", minmax_rdd.collect())
 
+
+#Minimum and Maximum values of the RDD
 minmax_list = minmax_rdd.collect()
 print("Minimum value of the list = ", min(minmax_list))
 print("Maximum value of the list = ", max(minmax_list))
     
-
-
-# In[ ]:
-
-
-
 
