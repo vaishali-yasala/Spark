@@ -27,5 +27,10 @@ filter( ) is the transformation that returns a new RDD with only the elements th
 
  5. mapPartitionsWithIndex(func) Transformation -
  mapPartitionsWithIndex( ) is similar to mapPartitions, but also provides func with an integer value representing the index of the partition, so func must be of type (Int, Iterator <T>) => Iterator<U> when running on an RDD of type T. 
-  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-mapPartitionsWithIndex.py)
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-mapPartitionsWithIndex.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-mapPartitionsWithIndex.pdf)
+
+ 6. sample() Transformation -
+ Sample a function fraction of the data, with or without replacement, using a given random number generator seed. 
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-sample.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-sample.pdf)
