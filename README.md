@@ -34,3 +34,8 @@ filter( ) is the transformation that returns a new RDD with only the elements th
  Sample a function fraction of the data, with or without replacement, using a given random number generator seed. 
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-sample.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-sample.pdf)
+
+ 7. union() Transformation - 
+ Return a new dataset that contains the union of the elements in the source dataset and the argument. 
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-union.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-union.pdf)
