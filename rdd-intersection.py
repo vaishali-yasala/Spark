@@ -24,7 +24,7 @@ rdd = spark.sparkContext.parallelize(list1, 5)
 rdd1 = spark.sparkContext.parallelize(list2, 2)
     
 #with intersection(), we find the intersection of two datasets.
-#Therefore, the output will not contain any duplicates.
+#The output will not contain any duplicates.
 intersection_rdd = rdd.intersection(rdd1)
     
 print(intersection_rdd.collect())  
