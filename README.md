@@ -24,3 +24,8 @@ filter( ) is the transformation that returns a new RDD with only the elements th
  Similar to map, but runs separately on each partition of the RDD.
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-mapPartitions.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-mapPartitions.pdf)
+
+ 5. mapPartitionsWithIndex(func) Transformation -
+ mapPartitionsWithIndex( ) is similar to mapPartitions, but also provides func with an integer value representing the index of the partition, so func must be of type (Int, Iterator <T>) => Iterator<U> when running on an RDD of type T. 
+  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-mapPartitionsWithIndex.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-mapPartitionsWithIndex.ipynb)
