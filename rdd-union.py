@@ -14,7 +14,7 @@ if __name__ == "__main__":
     spark = SparkSession \
         .builder \
         .master("local[*]") \
-        .appName("Sample Transformation") \
+        .appName("Union Transformation") \
         .getOrCreate()
     
     #Two lists 

@@ -15,7 +15,7 @@ from pyspark.sql import SparkSession
 spark = SparkSession \
         .builder \
         .master("local[*]") \
-        .appName("Sample Transformation") \
+        .appName("groupByKey Transformation") \
         .getOrCreate()
 
 #Create a list of tuples

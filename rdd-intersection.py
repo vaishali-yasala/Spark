@@ -5,7 +5,7 @@
 # 
 # 
 
-# In[7]:
+# In[6]:
 
 
 from pyspark.sql import SparkSession
@@ -13,7 +13,7 @@ from pyspark.sql import SparkSession
 spark = SparkSession \
         .builder \
         .master("local[*]") \
-        .appName("Sample Transformation") \
+        .appName("intersection Transformation") \
         .getOrCreate()
     
 #Two lists 
@@ -30,7 +30,7 @@ intersection_rdd = rdd.intersection(rdd1)
 print(intersection_rdd.collect())  
 
 
-# In[6]:
+# In[7]:
 
 
 #Finding the intersection between two strings

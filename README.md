@@ -56,3 +56,6 @@ Note: If you are grouping in order to perform an aggregation (such as a sum or a
 Note: By default, the level of parallelism in the output depends on the number of partitions of the parent RDD. You can pass an optional numPartitions argument to set a different number of tasks.
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-groupByKey.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-groupByKey.pdf)
+
+ 11. reduceByKey( ) Transformation -
+ When called on a dataset of (K, V) pairs, returns a dataset of (K, V) pairs where the values for each key are aggregated using the given reduce function <i>func</i>, which must be of type (V,V) => V. Like in groupByKey, the number of reduce tasks is configurable through an optional second argument. 
