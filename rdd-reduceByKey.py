@@ -42,7 +42,7 @@ sample_df.show()
 
 #In this key-value pair, key is the InvoiceNo and the number is the value
 
-#whereas the number is obtained from UnitPrice*Qunatity
+#whereas the price is obtained from UnitPrice*Qunatity
 
 
 import decimal
@@ -55,8 +55,8 @@ def get_price(x3):
     except decimal.InvalidOperation:
            print("Invalid input")
     key = x3[0]
-    number = convert
-    return (key, number)
+    price = convert
+    return (key, price)
 
 
 rdd1 = df1.rdd.map(lambda x : get_price(x))
@@ -73,13 +73,13 @@ print(sample_df_rdd.collect())
 # In[3]:
 
 
-# apply a reduceByKey() transformation to rdd1 to create a (key, value) pair
+# apply a reduceByKey() transformation on rdd1 to create a (key, value) pair
 
-#  where key is the InvoiceNo and value is number
+#  where key is the InvoiceNo and value is sum of prices for each key 
 
 #we can create more partitions than its parent RDD.
 
-rdd2 = rdd1.reduceByKey(lambda a, b: (a,b),10)
+rdd2 = rdd1.reduceByKey(lambda a, b: (a+b),10)
 
 
 print(len(rdd2.collect()),rdd2.getNumPartitions())
@@ -94,5 +94,11 @@ print("Number of Partitions =",rdd2.getNumPartitions())
 
 #Below we can the result of reduceByKey() applied on sample_df_rdd
 
-print(sample_df_rdd.reduceByKey(lambda a, b: (a,b),10).collect())
+print(sample_df_rdd.reduceByKey(lambda a, b: (a+b),10).collect())
+
+
+# In[ ]:
+
+
+
 
