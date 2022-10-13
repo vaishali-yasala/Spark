@@ -26,7 +26,7 @@ filter( ) is the transformation that returns a new RDD with only the elements th
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-mapPartitions.pdf)
 
  5. mapPartitionsWithIndex(func) Transformation -
- mapPartitionsWithIndex( ) is similar to mapPartitions, but also provides func with an integer value representing the index of the partition, so func must be of type (Int, Iterator <T>) => Iterator<U> when running on an RDD of type T. 
+ mapPartitionsWithIndex( ) is similar to mapPartitions, but also provides func with an integer value representing the index of the partition. 
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-mapPartitionsWithIndex.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-mapPartitionsWithIndex.pdf)
 
@@ -52,6 +52,7 @@ filter( ) is the transformation that returns a new RDD with only the elements th
 
 10. groupByKey( ) Transformation -
 When called on a dataset of (K, V) pairs, returns a dataset of (K, Iterable <V>) pairs. <br>
-Note: If you are grouping in order to perform an aggregation (such as a sum or average) over each key, using reduceByKey or aggregateByKey will yield much better performance.
-<br>
+Note: If you are grouping in order to perform an aggregation (such as a sum or average) over each key, using reduceByKey or aggregateByKey will yield much better performance.<br>
 Note: By default, the level of parallelism in the output depends on the number of partitions of the parent RDD. You can pass an optional numPartitions argument to set a different number of tasks.
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-groupByKey.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-groupByKey.pdf)
