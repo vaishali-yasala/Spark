@@ -106,13 +106,13 @@ print(sample_df_rdd.collect())
 
 
 # we are showing for each key (invoice), U is sum of prices for all items and no of items
-price_and_Count = new_rdd.aggregateByKey(
+price_and_count = new_rdd.aggregateByKey(
         (0, 0), \
         lambda x, y: (x[0]+y, x[1]+1), \
         lambda rdd1, rdd2: (rdd1[0] + rdd2[0], rdd1[1] + rdd2[1]) \
     )
     
 
-print("sum_count.count() = ", price_and_Count.count())
-print("sum_count.collect() = ", price_and_Count.collect())
+print("price_and_count.count() = ", price_and_count.count())
+print("price_and_count.collect() = ", price_and_count.collect())
 
