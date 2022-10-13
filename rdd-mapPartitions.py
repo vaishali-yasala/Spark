@@ -16,7 +16,7 @@ from pyspark.sql import SparkSession
 #Create the Spark Session with 4 partitions with master("local[4]")
 spark = SparkSession.builder \
     .master("local[4]") \
-    .appName('test') \
+    .appName('mapPartitions Transformation') \
     .getOrCreate()
 
 #Create an rdd with integers in the range of 1 to 1000
