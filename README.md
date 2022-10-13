@@ -39,3 +39,20 @@ filter( ) is the transformation that returns a new RDD with only the elements th
  Return a new dataset that contains the union of the elements in the source dataset and the argument. 
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-union.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-union.pdf)
+
+ 8. intersection( ) Transformation -
+ Return a new dataset that contains the intersection of elements in the source dataset and the argument. 
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-intersection.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-intersection.pdf)
+
+ 9. distinct( ) Transformation -
+ Return a new dataset that contains the distinct elements of the source dataset.
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-distinct.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-distinct.pdf)
+
+10. groupByKey( ) Transformation -
+When called on a dataset of (K, V) pairs, returns a dataset of (K, Iterable <V>) pairs.
+<br>
+Note: If you are grouping in order to perform an aggregation (such as a sum or average) over each key, using reduceByKey or aggregateByKey will yield much better performance.
+<br>
+Note: By default, the level of parallelism in the output depends on the number of partitions of the parent RDD. You can pass an optional numPartitions argument to set a different number of tasks.
