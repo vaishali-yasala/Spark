@@ -1,2 +1,0 @@
-If you are running it on the cluster you need to use your master name as an argument to master(). 
-Usually, it would be either Yarn or Mesos depends on your cluster setup.
