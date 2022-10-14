@@ -78,6 +78,6 @@ When called on a dataset of (K,V) pairs, returns a dataset of (K,U) pairs where 
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-join/rdd-join.pdf)
 
  15. [<b> cogroup(otherDataset, [numPartitions]) Transformation</b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-cogroup) - 
- When called on datasets of type (K, V) and (K, W), returns a dataset of (K, (Iterable<V>, Iterable<W>)) tuples. This operation is also called <i>groupWith</i>.
+ When called on datasets of type (K, V) and (K, W), returns a dataset of (K, (Iterable< V >, Iterable< W >)) tuples. This operation is also called <i>groupWith</i>.
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-cogroup/rdd-cogroup.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-cogroup/rdd-cogroup.pdf)
