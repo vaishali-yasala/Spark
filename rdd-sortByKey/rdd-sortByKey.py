@@ -9,7 +9,7 @@ from pyspark.sql import SparkSession
 spark = SparkSession \
         .builder \
         .master("local[*]") \
-        .appName("aggregrate Transformation") \
+        .appName("sortByKey Transformation") \
         .enableHiveSupport() \
         .getOrCreate()
 
@@ -23,7 +23,7 @@ df1 = df.select(df["InvoiceNo"],df["Quantity"]).repartition(4)
 
 print(df1.printSchema())
 
-#Creating view of the dataframe of with 3 required columns and sample of 3% of data
+#Creating view of the dataframe of with 2 required columns and sample of 1% of data
 sample_df = df1.sample(0.01,25)
 
 sample_df.show()

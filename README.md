@@ -69,5 +69,10 @@ When called on a dataset of (K,V) pairs, returns a dataset of (K,U) pairs where 
 
  13. [<b>sortByKey([ascending], [numPartitions]) Transformation </b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-sortByKey)- 
  When called on a dataset of (K, V) pairs whete K implements Ordered, returns a datset of (K, V) pairs stored by keys in ascending or descending order, as specified in the boolean <i>ascending</i> argument.
-  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-sortByKey/rdd-sortByKey.py)
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-sortByKey/rdd-sortByKey.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-sortByKey/rdd-sortByKey.pdf)
+
+ 14. [<b>join(otherDataset, [numPartitions]) Transformation </b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-join)- 
+ When called on datasets of type (K, V) and (K,W), returns a dataset of (K, (V, W)) pairs with pairs of all elements for each key. Outer joins are supported through <i>leftOuterJoin, rightOuterJoin </i>, and <i>fullOuterJoin</i>.
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-join/rdd-join.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-join/rdd-join.pdf)
