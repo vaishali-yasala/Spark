@@ -98,7 +98,7 @@ When called on a dataset of (K,V) pairs, returns a dataset of (K,U) pairs where 
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-coalesce_rdd-repartition/rdd-coalesce.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-coalesce_rdd-repartition/rdd-coalesce.pdf)
 
- 19. [<b> repartition(numPartitions) Transformation</b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-repartition) - 
+ 19. [<b> repartition(numPartitions) Transformation</b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-coalesce_rdd-repartition) - 
  Reshuffle the data in the RDD randomly to create either more or fewer partitions and balance it acroos them. This always shuffles all data over the network. 
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-coalesce_rdd-repartition/rdd-coalesce.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-coalesce_rdd-repartition/rdd-coalesce.pdf)
