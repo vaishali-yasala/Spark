@@ -57,7 +57,7 @@ print("Number of elements =",len(rdd2.collect()))
 print("Number of Partitions =",rdd2.getNumPartitions())
 print("----------")
 
-print(rdd2.collect())
+print(rdd2.take(5))
 
 
 # ### From result of Input block 2 and 3, we can see the number of elements decreased because they are grouped together when they have the same key. 
@@ -69,7 +69,7 @@ print(rdd2.collect())
 # mapValues operates on the values only
 # this also changes the original RDD's partitioning.
 
-print("rdd2.mapValues().collect() = ", rdd2.mapValues(lambda values: list(values)).collect())
+print("rdd2.mapValues().collect() = ", rdd2.mapValues(lambda values: list(values)).take(10))
 
 
 # ### groupByKey() Transformation cannot be used on large datasets.
