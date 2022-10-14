@@ -59,8 +59,8 @@ Note: By default, the level of parallelism in the output depends on the number o
 
  11. [<b>reduceByKey(func, [numPartitions]) Transformation </b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-reduceByKey)-
  When called on a dataset of (K, V) pairs, returns a dataset of (K, V) pairs where the values for each key are aggregated using the given reduce function <i>func</i>, which must be of type (V,V) => V. Like in groupByKey, the number of reduce tasks is configurable through an optional second argument. 
- - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-aggregateByKey/rdd-reduceByKey.py)
- - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-aggregateByKey/rdd-reduceByKey.pdf)
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-reduceByKey/rdd-reduceByKey.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-reduceByKey/rdd-reduceByKey.pdf)
 
 12. [<b>aggregateByKey(zeroValue)(seqOp, combOp, [numPartitions]) Transformation </b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-aggregateByKey)- 
 When called on a dataset of (K,V) pairs, returns a dataset of (K,U) pairs where the values for each key are aggregated using the given combine functions and a neutral "zero" value. Allows an aggregate value type that is different than the input value type, while avoiding the unnecesary allocations. Like in <i>groupByKey</i>, the number of reduce tasks is configurable through an optional second argument.
