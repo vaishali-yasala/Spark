@@ -81,3 +81,12 @@ When called on a dataset of (K,V) pairs, returns a dataset of (K,U) pairs where 
  When called on datasets of type (K, V) and (K, W), returns a dataset of (K, (Iterable< V >, Iterable< W >)) tuples. This operation is also called <i>groupWith</i>.
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-cogroup/rdd-cogroup.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-cogroup/rdd-cogroup.pdf)
+
+ 16. [<b>cartesian(otherDataset) Transformation </b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-cartesian) - 
+ When called on datasets of type T and U, returns a dataset of (T, U) pairs (all pairs of elements).
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-cartesian/rdd-cartesian.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-cartesian/rdd-cartesian.pdf)
+
+ 17. [<b>pipe(command, [envVars]) Transformation </b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-pipe) -
+ Pipe each partition of the RDD through a shell command, e.g. a Perl or bash script. RDD elements are written to the process's stdin and lines output to its stdout are returned as an RDD of strings.
+
