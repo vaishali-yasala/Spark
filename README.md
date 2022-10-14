@@ -69,3 +69,5 @@ When called on a dataset of (K,V) pairs, returns a dataset of (K,U) pairs where 
 
  13. sortByKey([ascending], [numPartitions]) Transformation - 
  When called on a dataset of (K, V) pairs whete K implements Ordered, returns a datset of (K, V) pairs stored by keys in ascending or descending order, as specified in the boolean <i>ascending</i> argument.
+  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-sortByKey.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-sortByKey.pdf)
