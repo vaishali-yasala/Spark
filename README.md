@@ -89,4 +89,6 @@ When called on a dataset of (K,V) pairs, returns a dataset of (K,U) pairs where 
 
  17. [<b>pipe(command, [envVars]) Transformation </b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-pipe) -
  Pipe each partition of the RDD through a shell command, e.g. a Perl or bash script. RDD elements are written to the process's stdin and lines output to its stdout are returned as an RDD of strings.
-
+ - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-pipe/rdd-pipe.py)
+ - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-pipe/rdd-pipe.pdf)
+ - [Shell Script Command](https://github.com/vaishali-yasala/Spark/tree/main/Exercise_Dependencies/pipe.sh)
