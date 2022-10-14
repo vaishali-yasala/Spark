@@ -25,7 +25,7 @@ from pyspark.sql import SparkSession
 spark = SparkSession \
         .builder \
         .master("local[*]") \
-        .appName("groupByKey Transformation") \
+        .appName("aggregrate Transformation") \
         .enableHiveSupport() \
         .getOrCreate()
 
@@ -114,5 +114,5 @@ price_and_count = new_rdd.aggregateByKey(
     
 
 print("price_and_count.count() = ", price_and_count.count())
-print("price_and_count.collect() = ", price_and_count.collect())
+print("price_and_count.collect() = ", price_and_count.take(10))
 

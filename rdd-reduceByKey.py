@@ -15,7 +15,7 @@ import pyspark
 spark = SparkSession \
         .builder \
         .master("local[4]") \
-        .appName("Sample Transformation") \
+        .appName("reduceByKey Transformation") \
         .enableHiveSupport() \
         .getOrCreate()
 
@@ -35,7 +35,7 @@ sample_df = df1.sample(0.02,134)
 sample_df.show()
 
 
-# In[2]:
+# In[10]:
 
 
 # apply a map() transformation to rdd to create (K, V) pairs
@@ -70,7 +70,7 @@ sample_df_rdd = sample_df.rdd.map(lambda x : get_price(x))
 print(sample_df_rdd.collect())
 
 
-# In[3]:
+# In[7]:
 
 
 # apply a reduceByKey() transformation on rdd1 to create a (key, value) pair
@@ -81,18 +81,16 @@ print(sample_df_rdd.collect())
 
 rdd2 = rdd1.reduceByKey(lambda a, b: (a+b),10)
 
-
-print(len(rdd2.collect()),rdd2.getNumPartitions())
 print("Number of elements =",len(rdd2.collect()))
 print("Number of Partitions =",rdd2.getNumPartitions())
 
 
 # ### From result of Input block 2 and 3, we can see the number of elements decreased because they are merged together when they have the same key. Additionally, it is optimized with a map side combine.
 
-# In[4]:
+# In[11]:
 
 
-#Below we can the result of reduceByKey() applied on sample_df_rdd
+#Below we can see the result first 5 elements for reduceByKey() applied on sample_df_rdd
 
 print(sample_df_rdd.reduceByKey(lambda a, b: (a+b),10).collect())
 

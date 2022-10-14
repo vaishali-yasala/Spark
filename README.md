@@ -66,3 +66,6 @@ Note: By default, the level of parallelism in the output depends on the number o
 When called on a dataset of (K,V) pairs, returns a dataset of (K,U) pairs where the values for each key are aggregated using the given combine functions and a neutral "zero" value. Allows an aggregate value type that is different than the input value type, while avoiding the unnecesary allocations. Like in <i>groupByKey</i>, the number of reduce tasks is configurable through an optional second argument.
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-aggregateByKey.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-aggregateByKey.pdf)
+
+ 13. sortByKey([ascending], [numPartitions]) Transformation - 
+ When called on a dataset of (K, V) pairs whete K implements Ordered, returns a datset of (K, V) pairs stored by keys in ascending or descending order, as specified in the boolean <i>ascending</i> argument.
