@@ -93,7 +93,7 @@ When called on a dataset of (K,V) pairs, returns a dataset of (K,U) pairs where 
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-pipe/rdd-pipe.pdf)
  - [Shell Script Command](https://github.com/vaishali-yasala/Spark/tree/main/Exercise_Dependencies/pipe.sh)
 
- 18. [<b>coalesce(numPartitions) Transformation </b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-coalesce) -
+ 18. [<b>coalesce(numPartitions) Transformation </b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-coalesce_rdd-repartition) -
  Decrease the number of partitions in the RDD to numPartitions. Useful for running operations more efficiently after filering down a large dataset.
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-coalesce_rdd-repartition/rdd-coalesce.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-coalesce_rdd-repartition/rdd-coalesce.pdf)
