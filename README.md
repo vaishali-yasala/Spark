@@ -144,3 +144,10 @@ Repartition the RDD according to the given partitioner and, within each resultin
 - Run a function func on each element of the dataset. This is usually done for side effects such as updating an Accumulator or interacting with external storage systems. 
 
 - Note: modifying variables other than Accumulators outside of the foreach() may result in undefined behavior. 
+
+### INPUT
+
+![img](./rdd-actions/rdd_actions_code.png)
+
+### OUTPUT
+![img](./rdd-actions/rdd_actions_output.png)
