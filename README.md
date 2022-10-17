@@ -4,8 +4,8 @@ In this Repository, we explore RDD Transformations and Actions. All these exampl
 Files ending with .py contains the Python language code.
 Files ending with .pdf contains the input and output result at various steps.
 
-## Table Of Contents
- 1.[<b>map Transformation </b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-map)-
+## Transformations
+ 1. [<b>map Transformation </b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-map)-
  map(func) is the transformation that takes a function and applies the function to each element of the input RDD. The result in the function will become the value of each element in the resultant RDD.
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-map/rdd-map.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-map/rdd-map.pdf)
@@ -103,3 +103,44 @@ When called on a dataset of (K,V) pairs, returns a dataset of (K,U) pairs where 
  - [Code](https://github.com/vaishali-yasala/Spark/blob/main/rdd-coalesce_rdd-repartition/rdd-coalesce.py)
  - [Output](https://github.com/vaishali-yasala/Spark/blob/main/rdd-coalesce_rdd-repartition/rdd-coalesce.pdf)
  
+20. [<b> repartitionAndSortWithinPartitions(partitioner) Transformation</b>](https://github.com/vaishali-yasala/Spark/tree/main/rdd-coalesce_rdd-repartition) -
+Repartition the RDD according to the given partitioner and, within each resulting partition, sort records by their keys. This is more efficient than calling repartition and then sorting within each partition because it can push the sorting down into the shuffle machinery. 
+
+## Actions
+
+1. <b> reduce(func) Action</b> 
+- Aggregate the elements of the dataset using a function func (which takes two arguments and returns one). The function should be commutative and associative so that it can be computed correctly in parallel. 
+- Currently reduces the partitions locally.
+
+2. <b> collect() Action</b> 
+- Return all the elements of the dataset as an array at the driver program. This is usually useful after a filter or other operation that returns a sufficiently small subset of the data.
+- This method should only be used if the resulting array is expected to be small, as all the data is loaded into the driver's memory.
+
+3. <b> count() Action</b> 
+- Return the number of elements in the dataset.
+
+4. <b> first() Action</b> 
+- Return the first element of the dataset (similar to take(1)).
+
+5. <b>take(n) Action</b> 
+- Return an array with the first n elements of the dataset. It works by first scanning one partition, and use the results from that partition to estimate the number of additional partitions needed to satisfy the limit.
+- This method should only be used if the resulting array is expected to be small, as all the data is loaded into the driver's memory.
+
+6. <b> takeSample(withReplacement, num, [seed]) Action</b> 
+- Return an array with a random sample of num elements of the dataset, with or without replacement, optionally pre-specifying a random number generator seed.
+- This method should only be used if the resulting array is expected to be small, as all data is loaded into driver's memory. 
+
+7. <b>takeOrdered(n, [ordering]) Action </b> 
+- Return the first n elements of the RDD using either their natural order or a custom comparator.
+- This method should only be used if the resulting array is expected to be small, as all data is loaded into driver's memory. 
+
+8. <b> saveAsTextFile(path) Action</b>
+- Write the elements of the dataset as a text file (or set of text files) in a given directory in the local HDFS or any other Hadoop_supported file system. Spark will call toString on each element to convert it to a line of text in the file. 
+
+9. <b> countByKey() Action </b> 
+- Only available on RDDs of type (K, V). Returns a hashmap of (K, Int) pairs with the count of each key.
+
+10. <b>foreach(func) Action </b>
+- Run a function func on each element of the dataset. This is usually done for side effects such as updating an Accumulator or interacting with external storage systems. 
+
+- Note: modifying variables other than Accumulators outside of the foreach() may result in undefined behavior. 
